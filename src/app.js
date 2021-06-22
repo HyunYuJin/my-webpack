@@ -3,9 +3,6 @@ import './app.css'
 import nyancat from './nyancat.jpg'
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.body.innerHTML = `
-        <img src="${nyancat}" alt="" />
-    `
+    console.log('Naver UI')
+    console.log(sum(1, 2))
 })
-
-console.log(sum(1, 2))

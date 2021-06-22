@@ -1,5 +1,41 @@
-body {
+/* Webpack Test */
+/* body {
     background-color: pink;
     background-image: url('./bg.png');
     background-repeat: no-repeat;
+} */
+
+/* NAVER 기본 body style */
+body {
+    font-size: 12px;
+    line-height: 16px;
+    color: #202020;
+    background-color: #FFF;
+    font-family:"Malgun Gothic", sans-serif;
+}
+
+.blind {
+    display: none;
+}
+
+.wrap {
+    overflow: hidden;
+    min-width: 1190px;
+}
+
+/* Image Sprite (처음써봄. 개선 필요?) */
+.logo-naver {
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2021/sp_main_4efc7a.png);
+    background-size: 440px 408px;
+    background-repeat: no-repeat;
+}
+
+.logo-naver {
+    display: inline-block;
+    width: 222px;
+    height: 52px;
+    background-position: 0 -158px;
+    background-repeat: no-repeat;
+    vertical-align: top;
+    content: '';
 }

@@ -3,28 +3,89 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>검색</title>
-    <link rel="stylesheet" href="src/main.css">
+    <title>Naver</title>
   </head>
   <body>
-    <div id="app">
-      <header>
-        <h2 class="container">검색</h2>
+    <div id="wrap">
+      <header id="header" class="header">
+        <h2 class="blind">header</h2>
+
+        <div class="logo-search">
+          <div class="logo">
+            <!-- Image Sprite 쓰는듯.. -->
+            <a class="logo-naver" href="#"></a>
+          </div>
+          <div class="search">
+            <form id="searchBox" class="search-box">
+              <input type="search" title="검색어를 입력하세요.">
+              <button id="searchBtn" class="search-btn" type="submit"></button>
+            </form>
+          </div>
+        </div>
+
+        <div class="gnb">
+          <div class="category">
+            <ul class="green-cate">
+              <li class="nav-item"><a href="#">메일</a></li>
+              <li class="nav-item"><a href="#">카페</a></li>
+              <li class="nav-item"><a href="#">블로그</a></li>
+              <li class="nav-item"><a href="#">지식iN</a></li>
+              <li class="nav-item"><a href="#">쇼핑</a></li>
+              <li class="nav-item"><a href="#">Pay</a></li>
+              <li class="nav-item"><a href="#">TV</a></li>
+            </ul>
+            <ul class="black-cate">
+              <li class="nav-item"><a href="#">사전</a></li>
+              <li class="nav-item"><a href="#">뉴스</a></li>
+              <li class="nav-item"><a href="#">증권</a></li>
+              <li class="nav-item"><a href="#">부동산</a></li>
+              <li class="nav-item"><a href="#">지도</a></li>
+              <li class="nav-item"><a href="#">VIBE</a></li>
+              <li class="nav-item"><a href="#">책</a></li>
+              <li class="nav-item"><a href="#">웹툰</a></li>
+            </ul>
+            <a class="more" href="#">더보기</a>
+          </div>
+
+          <div class="weather"></div>
+        </div>
       </header>
   
-      <div class="container">
-        <form class="FormView">
-          <input type="text" placeholder="검색어를 입력하세요" autofocus>
-          <button type="reset" class="btn-reset"></button>
-        </form>
-  
-        <div class="content">
-          <div id="tabs"></div>
-          <div id="search-keyword"></div>
-          <div id="search-history"></div>
-          <div id="search-result"></div>
+      <container id="container" class="container">
+        <h2 class="blind">container</h2>
+
+        <div class="left-container">
+          <div class="ad-img1">
+            <img src="./src/ad-image01.jpg" alt="메인 배너">
+          </div>
+
+          <div class="news-stand"></div>
+
+          <div class="today-cotents"></div>
         </div>
-      </div>
+
+        <div class="right-container">
+          <div class="account"></div>
+
+          <div class="exchange-rate"></div>
+
+          <div class="ad-img2">
+            <img src="./src/ad-image02.jpg" alt="사이드 배너">
+          </div>
+
+          <div class="trend-shopping"></div>
+        </div>
+      </container>
+
+      <footer id="footer" class="footer">
+        <h2 class="blind">Footer</h2>
+
+        <div class="footer-inner">
+          <div class="notice-area">
+            공지사항
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script src="./dist/main.js"></script>
