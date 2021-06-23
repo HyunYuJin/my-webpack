@@ -10,44 +10,48 @@
       <header id="header" class="header">
         <h2 class="blind">header</h2>
 
-        <div class="logo-search">
-          <div class="logo">
-            <!-- Image Sprite 쓰는듯.. -->
-            <a class="logo-naver" href="#"></a>
-          </div>
-          <div class="search">
-            <form id="searchBox" class="search-box">
-              <input type="search" title="검색어를 입력하세요.">
-              <button id="searchBtn" class="search-btn" type="submit"></button>
-            </form>
+        <div class="header-section">
+          <div class="logo-search">
+            <div class="logo">
+              <!-- Image Sprite 쓰는듯.. -->
+              <a class="logo-naver" href="#"></a>
+            </div>
+            <div class="search">
+              <form id="searchBox" class="search-box">
+                <input type="text" title="검색어를 입력하세요.">
+                <button id="searchBtn" class="search-btn" type="submit"></button>
+              </form>
+            </div>
           </div>
         </div>
-
-        <div class="gnb">
-          <div class="category">
-            <ul class="green-cate">
-              <li class="nav-item"><a href="#">메일</a></li>
-              <li class="nav-item"><a href="#">카페</a></li>
-              <li class="nav-item"><a href="#">블로그</a></li>
-              <li class="nav-item"><a href="#">지식iN</a></li>
-              <li class="nav-item"><a href="#">쇼핑</a></li>
-              <li class="nav-item"><a href="#">Pay</a></li>
-              <li class="nav-item"><a href="#">TV</a></li>
-            </ul>
-            <ul class="black-cate">
-              <li class="nav-item"><a href="#">사전</a></li>
-              <li class="nav-item"><a href="#">뉴스</a></li>
-              <li class="nav-item"><a href="#">증권</a></li>
-              <li class="nav-item"><a href="#">부동산</a></li>
-              <li class="nav-item"><a href="#">지도</a></li>
-              <li class="nav-item"><a href="#">VIBE</a></li>
-              <li class="nav-item"><a href="#">책</a></li>
-              <li class="nav-item"><a href="#">웹툰</a></li>
-            </ul>
-            <a class="more" href="#">더보기</a>
+        
+        <div class="header-section">
+          <div class="gnb">
+            <div class="category">
+              <ul class="green-cate">
+                <li class="nav-item"><a href="#">메일</a></li>
+                <li class="nav-item"><a href="#">카페</a></li>
+                <li class="nav-item"><a href="#">블로그</a></li>
+                <li class="nav-item"><a href="#">지식iN</a></li>
+                <li class="nav-item"><a href="#">쇼핑</a></li>
+                <li class="nav-item"><a href="#">Pay</a></li>
+                <li class="nav-item"><a href="#">TV</a></li>
+              </ul>
+              <ul class="black-cate">
+                <li class="nav-item"><a href="#">사전</a></li>
+                <li class="nav-item"><a href="#">뉴스</a></li>
+                <li class="nav-item"><a href="#">증권</a></li>
+                <li class="nav-item"><a href="#">부동산</a></li>
+                <li class="nav-item"><a href="#">지도</a></li>
+                <li class="nav-item"><a href="#">VIBE</a></li>
+                <li class="nav-item"><a href="#">책</a></li>
+                <li class="nav-item"><a href="#">웹툰</a></li>
+              </ul>
+              <a class="more" href="#">더보기</a>
+            </div>
+  
+            <div class="weather"></div>
           </div>
-
-          <div class="weather"></div>
         </div>
       </header>
   
@@ -65,15 +69,39 @@
         </div>
 
         <div class="right-container">
-          <div class="account"></div>
+          <div class="account">
+            <span>네이버를 더 쉽고 편리하게 이용하세요</span>
+            <button class="account-btn"><span>NAVER</span> 로그인</button>
+            <div class="account-etc">
+              <div class="account-find-wrap">
+                <a href="#">아이디</a>
+                <a href="#">비밀번호찾기</a>
+              </div>
 
-          <div class="exchange-rate"></div>
+              <div class="account-join-wrap">
+                <a href="#">회원가입</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-swiper">
+            <div class="timeline-swiper-contents">
+              잔여백신 현황
+            </div>
+
+            <div class="timeline-swiper-btn-wrap">
+              <div class="prev-btn"></div>
+              <div class="next-btn"></div>
+            </div>
+          </div>
 
           <div class="ad-img2">
             <img src="./src/ad-image02.jpg" alt="사이드 배너">
           </div>
 
-          <div class="trend-shopping"></div>
+          <div class="trend-shopping">
+
+          </div>
         </div>
       </container>
 

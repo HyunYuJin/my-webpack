@@ -6,6 +6,13 @@
 } */
 
 /* NAVER 기본 body style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-size: 12px;
     line-height: 16px;
@@ -18,9 +25,36 @@ body {
     display: none;
 }
 
-.wrap {
+#wrap {
     overflow: hidden;
     min-width: 1190px;
+}
+
+.header {
+    position: relative;
+}
+
+.header-section {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #DDD;
+}
+.header-section:nth-of-type(2) {
+    border-bottom: 0;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+
+.logo-search {
+    display: flex;
+    flex-direction: row;
+    width: 1130px;
+    height: 160px;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.logo {
+    padding-right: 1.5rem;
 }
 
 /* Image Sprite (처음써봄. 개선 필요?) */
@@ -38,4 +72,106 @@ body {
     background-repeat: no-repeat;
     vertical-align: top;
     content: '';
+}
+
+.search {
+    position: relative;
+    width: 582px;
+    height: 52px;
+    background-color: #FFF;
+    border: 2px solid #19CE60;
+    border-radius: 2px;
+}
+
+.search form {
+    position: relative;
+    height: 100%;
+}
+
+.search form input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 444px;
+    padding: 13px 15px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    outline: 0;
+}
+
+.search form .search-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 56px;
+    height: 100%;
+    background-color: #19CE60;
+    border: none;
+}
+
+.gnb {
+    position: relative;
+    width: 1130px;
+    margin: 0 auto;
+}
+
+.category {
+    display: flex;
+    flex-direction: row;
+    padding: 11px 270px 11px 0;
+}
+
+.category ul {
+    list-style: none;
+    display: inline-block;
+}
+
+.category ul li {
+    display: inline-block;
+}
+
+.category ul li a {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -.3px;
+    color: #03C75A;
+    display: block;
+    text-decoration: none;
+}
+
+.container {
+    position: relative;
+    width: 1130px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.left-container {
+    width: 750px;
+}
+
+.ad-img1 {
+    width: 100%;
+    border: 1px solid #DDD;
+}
+
+.ad-img1 > img {
+    display: inline-block;
+    width: 100%;
+}
+
+.right-container {
+    width: 380px;
+}
+
+.ad-img2 {
+    width: 100%;
+}
+.ad-img2 > img {
+    display: inline-block;
+    width: 100%;
 }
