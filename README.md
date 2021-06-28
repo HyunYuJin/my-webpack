@@ -91,8 +91,8 @@ package.json에 설정해준대로 번들링 작업을 시켜주기 위해 커�
 이제 실행시킬 때 간단하게 커스텀 명령어만 실행해주면 번들링 작업을 할 수 있게 됩니다.
 
 
-### loader
-loader는 함수 형태로 작성합니다.
+### Loader
+Loader는 함수 형태로 작성합니다.
 로더는 modules에 rules라는 배열에 추가할 수 있습니다.
 
 #### webpack.config.js
@@ -203,5 +203,61 @@ module: {
   }
 }
 ```
+
+### Plugin
+Loader가 각 파일 단위로 처리했던 것에 반해서 Plugin은 번들된 결과물 하나를 처리합니다.(js 코드 난독화, 특정 텍스트 추출 등)
+  
+-> 모든 파일을 뭉쳐둔 번들파일에 의해서 한번만 실행이 됩니다.
+
+#### webpack.config.js
+```javascript
+// custom plugin
+const MyWebpackPlugin = require('./my-webpack-plugin')
+
+...
+plugins: [
+  new MyWebpackPlugin()
+]
+```
+
+
+### BannerPlugin
+빌드한 결과물에 빌드 정보나 커밋 버전 등을 추가할 수 있습니다.
+
+#### webpack.config.js
+```javascript
+plugins: [
+  new webpack.BannerPlugin({
+    banner: `
+      Build Date: ${new Date().toLocaleString()}
+      Commit Version: ${childProcess.execSync('git rev-parse --short HEAD')}
+      Author: ${childProcess.execSync('git config user.name')}
+    `,
+  })
+]
+```
+
+#### 결과('./dist/main.js')
+[BannerPlugin Build 결과](https://user-images.githubusercontent.com/38209966/123196953-c0ab8e80-d4e5-11eb-83c5-8102e90262b6.png)
+
+
+### DefinePlugin
+환경정보를 제공하는 플러그인입니다.  
+API와 같은 환경 의존적인 정보는 소스가 아니라 다른 곳에서 관리해주는 것이 더 좋습니다.
+
+#### webpack.config.js
+```javascript
+plugins: [
+  ...
+  new webpack.DefinePlugin({})
+]
+```
+빈 객체를 전달해도 기본적으로 노드 환경정보인 process.env.NODE_ENV(mode: 'development')를 넣어줍니다.
+```javascript
+// app.js
+
+console.log(process.env.NODE_ENV) // development
+```
+
 
 [참고: 김정환의 블로그](https://jeonghwan-kim.github.io/series/2019/12/09/frontend-dev-env-npm.html)
