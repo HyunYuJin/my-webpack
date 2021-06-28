@@ -260,4 +260,39 @@ console.log(process.env.NODE_ENV) // development
 ```
 
 
+
+## Babel
+Babel은 
+
+```javascript
+const alert = msg => window.alert(msg)
+```
+
+### Block-scoping
+const, let 처럼 블록 스코핑을 따르는 예약어를 함수 스코핑을 사용하는 var 변경해주는 플러그인 입니다.
+
+```javascript
+var alert = msg => window.alert(msg);
+```
+
+### Arrow-functions
+인터넷 익스플로어에서는 arrow function을 지원해주지 않는데, 이를 일반 함수로 변경해주는 플러그인 입니다.
+
+```javascript 
+var alert = function (msg) {
+  return window.alert(msg);
+};
+```
+
+### Strict-mode
+상단에 strict-mode를 정의하여, 엄격모드로 브라우저가 실행되도록 하는 플러그인 입니다.
+
+```javascript
+"use strict";
+
+var alert = function (msg) {
+  return window.alert(msg);
+};
+```
+
 [참고: 김정환의 블로그](https://jeonghwan-kim.github.io/series/2019/12/09/frontend-dev-env-npm.html)
