@@ -21,8 +21,17 @@ body {
     font-family:"Malgun Gothic", sans-serif;
 }
 
+ul li { list-style: none; }
+a { text-decoration: none; }
+
 .blind {
     display: none;
+}
+
+/* 이미지 사이즈는 본래 2배이기 때문에 절반 사이즈로 만들어준다. */
+.splite {
+    background: url('./sprite_img.png') no-repeat;
+    background-size: 440px 408px;
 }
 
 #wrap {
@@ -36,12 +45,42 @@ body {
 
 .header-section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     border-bottom: 1px solid #DDD;
 }
 .header-section:nth-of-type(2) {
     border-bottom: 0;
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+
+.sub-site {
+    position: absolute;
+    right: 0;
+}
+
+.sub-site ul li {
+    display: inline-block;
+    margin: 0.3rem 0.8rem;
+}
+
+.sub-site ul li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.junior-menu {
+    background-position-x: -333px;
+    background-position-y: -267px;
+    width: 60px;
+    height: 10px;
+}
+
+.happy-bin {
+    background-position-x: -257px;
+    background-position-y: -308px;
+	width: 34px;
+	height: 11px;
 }
 
 .logo-search {
@@ -57,21 +96,12 @@ body {
     padding-right: 1.5rem;
 }
 
-/* Image Sprite (처음써봄. 개선 필요?) */
 .logo-naver {
-    background-image: url(https://s.pstatic.net/static/www/img/uit/2021/sp_main_4efc7a.png);
-    background-size: 440px 408px;
-    background-repeat: no-repeat;
-}
-
-.logo-naver {
+    background-position-x: 0px;
+    background-position-y: -158px;
     display: inline-block;
     width: 222px;
     height: 52px;
-    background-position: 0 -158px;
-    background-repeat: no-repeat;
-    vertical-align: top;
-    content: '';
 }
 
 .search {
@@ -107,20 +137,25 @@ body {
     right: 0;
     bottom: 0;
     width: 56px;
-    height: 100%;
     background-color: #19CE60;
     border: none;
 }
 
+.search-icon {
+    display: inline-block;
+    background-position-x: 0px; 
+    background-position-y: -386px;
+    width: 22px;
+    height: 22px;
+}
+
 .gnb {
     position: relative;
-    width: 1130px;
-    margin: 0 auto;
 }
 
 .category {
-    display: flex;
-    flex-direction: row;
+    width: 1130px;
+    margin: 0 auto;
     padding: 11px 270px 11px 0;
 }
 
@@ -134,12 +169,21 @@ body {
 }
 
 .category ul li a {
+    display: block;
+    color: #03C75A;
     font-size: 15px;
     font-weight: 700;
-    letter-spacing: -.3px;
-    color: #03C75A;
-    display: block;
-    text-decoration: none;
+    letter-spacing: -0.3px;
+}
+
+.mail-icon {
+    display: inline-block;
+    background-position-x: -48px;
+    background-position-y: -386px;
+    width: 20.5px;
+    height: 21px;
+    margin: 3px 9px 0 0;
+    padding: 5px 0;
 }
 
 .container {
