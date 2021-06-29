@@ -262,8 +262,16 @@ console.log(process.env.NODE_ENV) // development
 
 
 ## Babel
-Babel은 
+Babel은 바벨탑에서 유래되었다고 합니다.(사람들이 소통하는데에 실패해서 바벨탑을 쌓는 것도 실패한 사례)  
+프론트엔드 개발을 할 때 각 브라우저에 맞게 코드를 짜다보니 코드가 일관적이지 못합니다.   
+따라서, 크로스브라우징 이슈에 대응하기 위해서 등장한 것입니다.
 
+### 설치
+```bash
+npm install -D @babel/core  @babel/cli
+```
+
+### 예제 코드
 ```javascript
 const alert = msg => window.alert(msg)
 ```
@@ -294,5 +302,32 @@ var alert = function (msg) {
   return window.alert(msg);
 };
 ```
+
+### Babel-preset
+필요한 플러그인을 일일이 설치하는 것은 너무 불편쓰하잖아요?
+바벨을 목적에 맞게 여러가지 플러그인을 세트로 모아놓은 것을 "Preset"이라고 합니다.
+
+```javascript
+// my-babel-presets.js (custom preset)
+module.exports = function myBabelPreset() {
+    return {
+        plugins: [
+            "@babel/plugin-transform-block-scoping",
+            "@babel/plugin-transform-arrow-functions",
+            "@babel/plugin-transform-strict-mode",
+        ],
+    }
+}
+```
+
+```javascript
+// babel.config.js
+module.exports = {
+    presets: [
+        './my-babel-preset'
+    ]
+}
+```
+
 
 [참고: 김정환의 블로그](https://jeonghwan-kim.github.io/series/2019/12/09/frontend-dev-env-npm.html)
