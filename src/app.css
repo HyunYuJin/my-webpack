@@ -24,9 +24,7 @@ body {
 ul li { list-style: none; }
 a { text-decoration: none; }
 
-.blind {
-    display: none;
-}
+.blind { display: none; }
 
 /* 이미지 사이즈는 본래 2배이기 때문에 절반 사이즈로 만들어준다. */
 .splite {
@@ -37,10 +35,16 @@ a { text-decoration: none; }
 #wrap {
     overflow: hidden;
     min-width: 1190px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
     position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .header-section {
@@ -48,52 +52,78 @@ a { text-decoration: none; }
     flex-direction: column;
     border-bottom: 1px solid #DDD;
 }
-.header-section:nth-of-type(2) {
-    border-bottom: 0;
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
-}
 
 .sub-site {
     position: absolute;
-    right: 0;
+    top: 12px;
+    right: 27px;
 }
 
 .sub-site ul li {
-    display: inline-block;
-    margin: 0.3rem 0.8rem;
+    display: inline-flex;
+    flex-direction: row;
+    cursor: pointer;
 }
 
-.sub-site ul li a {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
+.sub-site ul li::after {
+  content: '|';
+  width: 1px;
+  height: 10px;
+  margin: 0px 7px;
+  color: #404040;
 }
 
-.junior-menu {
+.sub-site ul li:last-child::after {
+  content: '';
+}
+
+.sub-first > a {
+  font-size: 11px;
+  color: #404040;
+}
+
+.sub-second {
     background-position-x: -333px;
     background-position-y: -267px;
     width: 60px;
     height: 10px;
+    margin-right: 7px;
 }
 
-.happy-bin {
+.sub-second:hover {
+  background-position-x: -257px;
+  background-position-y: -296px;
+}
+
+.sub-second::after {
+  margin: 0px 67px !important;
+}
+
+.sub-third {
     background-position-x: -257px;
     background-position-y: -308px;
-	width: 34px;
-	height: 11px;
+    width: 34px;
+    height: 11px;
+    margin-left: 7px;
+}
+
+.sub-third:hover {
+  background-position-x: -380px;
+  background-position-y: -199px;
 }
 
 .logo-search {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     width: 1130px;
     height: 160px;
-    margin: 0 auto;
     padding: 3rem 0;
 }
 
 .logo {
-    padding-right: 1.5rem;
+    margin-right: 1.5rem;
 }
 
 .logo-naver {
@@ -143,55 +173,80 @@ a { text-decoration: none; }
 
 .search-icon {
     display: inline-block;
-    background-position-x: 0px; 
+    background-position-x: 0px;
     background-position-y: -386px;
     width: 22px;
     height: 22px;
 }
 
+.gnb-section {
+  position: relative;
+  box-shadow: 0px 0px 5px #DDD;
+}
+
 .gnb {
-    position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  width: 1130px;
+  padding: 10px 0px;
 }
 
 .category {
-    width: 1130px;
-    margin: 0 auto;
-    padding: 11px 270px 11px 0;
+    position: relative;
 }
 
 .category ul {
-    list-style: none;
-    display: inline-block;
-}
-
-.category ul li {
-    display: inline-block;
-}
-
-.category ul li a {
-    display: block;
-    color: #03C75A;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
     font-size: 15px;
     font-weight: 700;
+    color: #000;
     letter-spacing: -0.3px;
+    margin-right: 12px;
+}
+
+.green-category {
+  display: flex;
+}
+
+.green-category li, .black-category li {
+  margin-left: 12px;
+}
+
+.green-category li a {
+    display: block;
+    color: #03C75A;
+    padding: 5px 0;
 }
 
 .mail-icon {
     display: inline-block;
     background-position-x: -48px;
     background-position-y: -386px;
+    vertical-align: middle;
     width: 20.5px;
     height: 21px;
-    margin: 3px 9px 0 0;
-    padding: 5px 0;
+    margin-right: 9px;
+}
+
+.black-category li a {
+  display: block;
+  color: #000;
+  padding: 5px 0;
 }
 
 .container {
     position: relative;
     width: 1130px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    display: flex;
+    padding: 20px 30px;
+    /* display: grid;
+    grid-template-columns: 1.5fr 1fr; */
 }
 
 .left-container {
