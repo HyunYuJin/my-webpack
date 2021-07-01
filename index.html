@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naver</title>
+    <link rel="stylesheet" href="./index.css">
   </head>
   <body>
     <div id="wrap">
@@ -11,21 +12,19 @@
         <h2 class="blind">header</h2>
 
         <div class="header-section">
-          <div class="sub-site">
-            <ul>
-              <li class="sub-first">
-                <a href="#">네이버를 시작 페이지로</a>
-              </li>
-              <li class="sub-second splite">
+          <div class="header-wrap">
+            <div class="sub-site">
+              <a href="#" class="sub-first">네이버를 시작 페이지로
+                <span class="sub-first-icon"></span>
+              </a>
+              <a href="#" class="sub-second splite">
                 <span class="blind">쥬니버네이버</span>
-              </li>
-              <li class="sub-third splite">
+              </a>
+              <a href="#" class="sub-third splite">
                 <span class="blind">해피빈</span>
-              </li>
-            </ul>
-          </div>
+              </a>
+            </div>
 
-          <div class="logo-search">
             <div class="logo"><a class="logo-naver splite" href="#"></a>
             </div>
             <div class="search">
@@ -65,7 +64,10 @@
                 <li class="nav-item"><a href="#">책</a></li>
                 <li class="nav-item"><a href="#">웹툰</a></li>
               </ul>
-              <a class="more" href="#">더보기</a>
+              <a class="more" href="#">
+                <span class="more-text">더보기</span>
+                <span class="more-arrow splite"></span>
+              </a>
             </div>
 
             <div class="weather"></div>
@@ -74,51 +76,239 @@
       </header>
 
       <container id="container" class="container">
-        <h2 class="blind">container</h2>
+          <div class="inner-container">
+            <h2 class="blind">container</h2>
 
-        <div class="left-container">
-          <div class="ad-img1">
-            <img src="./src/ad-image01.jpg" alt="">
-          </div>
+            <div class="left-container">
+              <div class="ad-img1">
+                <img src="./src/ad-image01.jpg" alt="">
+              </div>
+    
+              <div class="news-contents">
+                  <!-- news-contents HEADER -->
+                  <div class="news-header">
+                    <div class="news-header-inner">
+                        <a href="#" class="news-header-link">
+                            연합뉴스
+                            <span class="splite"></span>
+                        </a>
+                        <div class="news-header-lists">
+                            <a href="#">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum reiciendis praesentium maiores dolore impedit nemo doloremque, vitae voluptates deserunt laudantium quos excepturi ut, sapiente nisi vero quidem sequi inventore voluptatum!
+                            </a>
+                        </div>
+                    </div>
+                  
+                    <div class="news-header-category">
+                        <a href="#" class="news-naver">네이버 뉴스</a>
+                        <a href="#">연애</a>
+                        <a href="#">스포츠</a>
+                        <a href="#">경제</a>
+                    </div>
+                </div>
+                  <!-- news-contents BODY -->
+                  <div class="news-body">
+                      <div class="news-body-title">
+                          <div class="news-body-inner">
+                              <a href="#" class="news-body-stand">
+                                <span class="splite"></span>
+                                뉴스스탠드
+                                <span class="splite"></span>
+                              </a>
+                              <div class="news-body-tabs">
+                                  <a href="#">구독한 언론사</a>
+                                  <a href="#" class="tab-on">전체언론사</a>
+                              </div>
+                          </div>
+                          <div class="news-body-view-methods">
+                              <a href="#" class="view-list-method splite"></a>
+                              <a href="#" class="view-list-block splite"></a>
+                              <a href="#" class="view-setting splite"></a>
+                          </div>
+                        </div>
+                        <div class="news-body-swiper">
+                            <div class="news-body-swiper-container">
+                                <div class="news-body-swiper-thumnails">
+                                    <div class="swiper-prevBtn splite"></div>
 
-          <div class="news-stand"></div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News01</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News02</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News03</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News04</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News05</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News06</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News07</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News08</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News09</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News10</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News11</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News12</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News13</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News14</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News15</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News16</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News17</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News18</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News19</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News20</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News21</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News22</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News23</a>
+                                    </div>
+                                    <div class="swiper-thumbnail">
+                                        <a href="#">News24</a>
+                                    </div>
 
-          <div class="today-cotents"></div>
-        </div>
+                                    <div class="swiper-nextBtn splite"></div>
+                                </div>
+                            </div>
+                        </div>
+                  </div>
+              </div>
+    
+              <div class="today-contents">
+                  <!-- today-contents HEADER -->
+                  <div class="today-header">
+                     <div class="today-header-inner-wrap">
+                         <div class="today-header-inner">
+                             <span class="today-header-title">오늘 읽을만한 글</span>
+                             <span class="today-header-dsc">주제별로 분류된 다양한 글 모음</span>
+                         </div>
+                         <div class="today-header-info">
+                             <span class="today-header-info-total"><strong>1,858</strong> 개의 글</span>
+                             <span class="bar-icon"></span>
+                             <a href="#" class="today-header-info-setting">
+                                 <span class="splite"></span>
+                                 관심 주제 설정
+                             </a>
+                         </div>
+                     </div>
 
-        <div class="right-container">
-          <div class="account">
-            <span>네이버를 더 쉽고 편리하게 이용하세요</span>
-            <button class="account-btn"><span>NAVER</span> 로그인</button>
-            <div class="account-etc">
-              <div class="account-find-wrap">
-                <a href="#">아이디</a>
-                <a href="#">비밀번호찾기</a>
+                    <div class="today-theme-menu-container">
+                        <div class="today-theme-menu-inner-container">
+                            <div class="today-theme-prevBtn splite"></div>
+
+                            <div class="today-theme-menu-wrap">
+                                <ul class="today-theme-menu">
+                                    <li class="today-theme-menu-item">
+                                        <a href="#" class="theme-on">엔터</a>
+                                    </li>
+                                    <li class="today-theme-menu-item">
+                                        <a href="#">스포츠</a>
+                                    </li>
+                                    <li class="today-theme-menu-item">
+                                        <a href="#">자동차</a>
+                                    </li>
+                                    <li class="today-theme-menu-item">
+                                        <a href="#">웹툰</a>
+                                    </li>
+                                    <li class="today-theme-menu-item">
+                                        <a href="#">경제M</a>
+                                    </li>
+                                    <li class="today-theme-menu-item">
+                                        <a href="#">레시피</a>
+                                    </li>
+                                    <li class="today-theme-menu-item">
+                                        <a href="#">게임</a>
+                                    </li>
+                                    <li class="today-theme-menu-item">
+                                        <a href="#">영화</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="today-theme-nextBtn splite"></div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- today-contents BODY -->
+                  <div class="today-body">
+                      
+                  </div>
+              </div>
+            </div>
+
+
+          <div class="right-container">
+            <div class="account">
+              <span>네이버를 더 쉽고 편리하게 이용하세요</span>
+              <button class="account-btn"><span>NAVER</span> 로그인</button>
+              <div class="account-etc">
+                <div class="account-find-wrap">
+                  <a href="#">아이디</a>
+                  <a href="#">비밀번호찾기</a>
+                </div>
+
+                <div class="account-join-wrap">
+                  <a href="#">회원가입</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-swiper">
+              <div class="timeline-swiper-contents">
+                잔여백신 현황
               </div>
 
-              <div class="account-join-wrap">
-                <a href="#">회원가입</a>
+              <div class="timeline-swiper-btn-wrap">
+                <div class="prev-btn"></div>
+                <div class="next-btn"></div>
               </div>
             </div>
-          </div>
 
-          <div class="timeline-swiper">
-            <div class="timeline-swiper-contents">
-              잔여백신 현황
+            <div class="ad-img2">
+              <img src="./src/ad-image02.jpg" alt="사이드 배너">
             </div>
 
-            <div class="timeline-swiper-btn-wrap">
-              <div class="prev-btn"></div>
-              <div class="next-btn"></div>
+            <div class="trend-shopping">
+
             </div>
-          </div>
-
-          <div class="ad-img2">
-            <img src="./src/ad-image02.jpg" alt="사이드 배너">
-          </div>
-
-          <div class="trend-shopping">
-
           </div>
         </div>
       </container>
