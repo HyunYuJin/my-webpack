@@ -26,6 +26,8 @@ a { text-decoration: none; }
 
 .blind { display: none; }
 
+h3 {  font-size: 14px; }
+
 /* 이미지 사이즈는 본래 2배이기 때문에 절반 사이즈로 만들어준다. */
 .splite {
     background: url('./sprite_img.png') no-repeat;
@@ -540,6 +542,7 @@ a { text-decoration: none; }
 }
 
 .today-header-title {
+    display: inline-block;
     font-size: 14px;
     font-weight: 700;
     color: #000;
@@ -624,9 +627,9 @@ a { text-decoration: none; }
 }
 
 .theme-on {
-    background-color: #d34f12 !important;
+    background-color: #e65da0 !important;
     color: #fff !important;
-    border: 1px solid #d34f12 !important;
+    border: 1px solid #e65da0 !important;
 }
 
 .today-theme-menu .today-theme-menu-item {
@@ -648,13 +651,112 @@ a { text-decoration: none; }
 }
 
 .today-theme-menu .today-theme-menu-item:hover a {
-    color: #d34f12;
+    color: #e65da0;
 }
 
 .today-body {
     width: 100%;
-    height: 300px;
-    background: pink;
+}
+
+.today-body-inner {
+    display: flex;
+    flex-direction: row;
+    padding: 22px 0 18px;
+}
+
+.today-title {
+    color: #e65da0;
+    font-weight: 700;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.today-subtitle {
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.today-left, .today-right {
+    width: 50%;
+}
+
+.today-left-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.today-left-thumbnail {
+    flex-shrink: 0;
+    width: 100%;
+    height: 180px;
+}
+
+.today-left-thumbnail > img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.today-left-info {
+    padding: 16px 18px 0 0;
+}
+
+.today-left-subtitle {
+    margin-top: 6px;
+}
+
+.today-left-subtitle {
+    max-height: 42px;
+    margin-top: 5px;
+    font-size: 13px;
+    color: #404040;
+    line-height: 21px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.today-right {
+    padding-left: 22px;
+}
+
+.today-right-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.today-right-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    margin-top: 14px;
+}
+
+.today-right-item:nth-of-type(1) { margin-top: 0; }
+
+.today-right-thumbnail {
+    flex-shrink: 0;
+    width: 98px;
+    height: 98px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    margin-right: 18px; 
+}
+
+.today-right-info {
+    padding: 4px 47px 0 0;
+    overflow: hidden;
+}
+
+.today-right-subtitle {
+    margin-top: 4px;
 }
 
 .right-container {
