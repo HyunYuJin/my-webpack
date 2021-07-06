@@ -15,17 +15,18 @@
           <div class="header-wrap">
             <div class="sub-site">
               <a href="#" class="sub-first">네이버를 시작 페이지로
-                <span class="sub-first-icon"></span>
+                <span class="splite sub-first-icon"></span>
               </a>
-              <a href="#" class="sub-second splite">
+              <span class="bar-icon"></span>
+              <a href="#" class="splite sub-second">
                 <span class="blind">쥬니버네이버</span>
               </a>
-              <a href="#" class="sub-third splite">
+              <a href="#" class="splite sub-third">
                 <span class="blind">해피빈</span>
               </a>
             </div>
 
-            <div class="logo"><a class="logo-naver splite" href="#"></a>
+            <div class="logo"><a class="splite logo-naver" href="#"></a>
             </div>
             <div class="search">
               <form id="searchBox" class="search-box">
@@ -78,7 +79,6 @@
       <container id="container" class="container">
           <div class="inner-container">
             <h2 class="blind">container</h2>
-
             <div class="left-container">
               <div class="ad-img1">
                 <img src="./src/ad-image01.jpg" alt="">
@@ -100,7 +100,7 @@
                     </div>
                   
                     <div class="news-header-category">
-                        <a href="#" class="news-naver">네이버 뉴스</a>
+                        <a href="#" class="dot news-naver">네이버 뉴스</a>
                         <a href="#">연애</a>
                         <a href="#">스포츠</a>
                         <a href="#">경제</a>
@@ -115,8 +115,8 @@
                                 <h3>뉴스스탠드</h3>
                                 <span class="splite"></span>
                               </a>
-                              <div class="news-body-tabs">
-                                  <a href="#">구독한 언론사</a>
+                              <div class="dot news-body-tabs">
+                                  <a href="#" class="subscription">구독한 언론사</a>
                                   <a href="#" class="tab-on">전체언론사</a>
                               </div>
                           </div>
@@ -315,16 +315,26 @@
 
           <div class="right-container">
             <div class="account">
-              <span>네이버를 더 쉽고 편리하게 이용하세요</span>
-              <button class="account-btn"><span>NAVER</span> 로그인</button>
+              <h2 class="blind">로그인</h2>
+              <p class="account-intro">네이버를 더 쉽고 편리하게 이용하세요</p>
+              <button class="account-btn">
+                <span class="account-logo-icon splite"></span>
+                로그인
+              </button>
               <div class="account-etc">
                 <div class="account-find-wrap">
-                  <a href="#">아이디</a>
-                  <a href="#">비밀번호찾기</a>
+                  <a href="#" class="dot account-id">
+                    <span class="splite account-id-icon"></span>
+                    아이디
+                  </a>
+                  <a href="#" class="accound-password">비밀번호찾기</a>
                 </div>
 
                 <div class="account-join-wrap">
-                  <a href="#">회원가입</a>
+                  <a href="#">
+                    <span class="splite account-join-icon"></span>
+                    회원가입
+                  </a>
                 </div>
               </div>
             </div>
@@ -334,9 +344,13 @@
                 잔여백신 현황
               </div>
 
-              <div class="timeline-swiper-btn-wrap">
-                <div class="prev-btn"></div>
-                <div class="next-btn"></div>
+              <div class="btn-wrap timeline-swiper-btn-wrap">
+                <div class="prev-btn">
+                  <span class="splite"></span>
+                </div>
+                <div class="next-btn">
+                  <span class="splite"></span>
+                </div>
               </div>
             </div>
 
@@ -345,7 +359,142 @@
             </div>
 
             <div class="trend-shopping">
+              <!-- trend-shopping HEADER -->
+              <div class="trend-header">
+                <div class="trend-header-inner">
+                  <div class="trend-header-title">
+                    <span class="splite trend-header-title-icon"></span>
+                    트렌드 쇼핑
+                    <span class="splite trend-header-title-arrow"></span>
+                  </div>
+  
+                  <div class="trend-header-tabs">
+                    <a href="#" class="trend-header-tab01">상품</a>
+                    <a href="#" class="trend-header-tab02">쇼핑몰</a>
+                    <a href="#" class="trend-header-tab03">MEN</a>
+                  </div>
+                </div>
 
+                <div class="trend-nav">
+                  <a href="#" class="trend-nav-item">쿠팡</a>
+                  <a href="#" class="trend-nav-item">G마켓</a>
+                  <a href="#" class="trend-nav-item">옥션</a>
+                  <a href="#" class="trend-nav-item">11번가</a>
+                  <a href="#" class="trend-nav-item">이마트몰</a>
+                  <a href="#" class="trend-nav-item">티몬</a>
+                  <a href="#" class="trend-nav-item">위메프</a>
+                  <a href="#" class="trend-nav-item">신세계몰</a>
+                  <a href="#" class="trend-nav-item">올리브영</a>
+                  <a href="#" class="trend-nav-item">롯데몰</a>
+                  <a href="#" class="trend-nav-item">GS샵</a>
+                  <a href="#" class="trend-nav-item">CJ온스타일</a>
+                </div>
+              </div>
+
+              <!-- trend-body -->
+              <div class="trend-body">
+                <div class="trend-body-inner">
+                  <div class="trend-body-swiper-btn-wrap">
+                    <div class="btn-wrap">
+                      <div class="prev-btn">
+                        <span class="splite"></span>
+                      </div>
+                      <div class="next-btn">
+                        <span class="splite"></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="trend-body-swiper">
+                    <ul class="trend-body-swiper-list">
+                      <li class="trend-item">
+                        <figure class="trend-item-thumbnail" style="background-color: red"></figure>
+                        <div class="trend-item-info">
+                          <div class="trend-item-title">꽃 원피스</div>
+                          <div class="trend-item-desc">예쁨이 폭발하네?</div>
+                        </div>
+                      </li>
+                      <li class="trend-item">
+                        <figure class="trend-item-thumbnail" style="background-color: red"></figure>
+                        <div class="trend-item-info">
+                          <div class="trend-item-title">꽃 원피스</div>
+                          <div class="trend-item-desc">예쁨이 폭발하네?</div>
+                        </div>
+                      </li>
+                      <li class="trend-item">
+                        <figure class="trend-item-thumbnail" style="background-color: red"></figure>
+                        <div class="trend-item-info">
+                          <div class="trend-item-title">꽃 원피스</div>
+                          <div class="trend-item-desc">예쁨이 폭발하네?</div>
+                        </div>
+                      </li>
+                      <li class="trend-item">
+                        <figure class="trend-item-thumbnail" style="background-color: red"></figure>
+                        <div class="trend-item-info">
+                          <div class="trend-item-title">꽃 원피스</div>
+                          <div class="trend-item-desc">예쁨이 폭발하네?</div>
+                        </div>
+                      </li>
+                      <li class="trend-item">
+                        <figure class="trend-item-thumbnail" style="background-color: red"></figure>
+                        <div class="trend-item-info">
+                          <div class="trend-item-title">꽃 원피스</div>
+                          <div class="trend-item-desc">예쁨이 폭발하네?</div>
+                        </div>
+                      </li>
+                      <li class="trend-item">
+                        <figure class="trend-item-thumbnail" style="background-color: red"></figure>
+                        <div class="trend-item-info">
+                          <div class="trend-item-title">꽃 원피스</div>
+                          <div class="trend-item-desc">예쁨이 폭발하네?</div>
+                        </div>
+                      </li>
+                      <li class="trend-item">
+                        <figure class="trend-item-thumbnail" style="background-color: red"></figure>
+                        <div class="trend-item-info">
+                          <div class="trend-item-title">꽃 원피스</div>
+                          <div class="trend-item-desc">예쁨이 폭발하네?</div>
+                        </div>
+                      </li>
+                      <li class="trend-item">
+                        <figure class="trend-item-thumbnail" style="background-color: red"></figure>
+                        <div class="trend-item-info">
+                          <div class="trend-item-title">꽃 원피스</div>
+                          <div class="trend-item-desc">예쁨이 폭발하네?</div>
+                        </div>
+                      </li>
+                      <li class="trend-item">
+                        <figure class="trend-item-thumbnail" style="background-color: red"></figure>
+                        <div class="trend-item-info">
+                          <div class="trend-item-title">꽃 원피스</div>
+                          <div class="trend-item-desc">예쁨이 폭발하네?</div>
+                        </div>
+                      </li>
+                      <li class="trend-item">
+                        <figure class="trend-item-thumbnail" style="background-color: red"></figure>
+                        <div class="trend-item-info">
+                          <div class="trend-item-title">꽃 원피스</div>
+                          <div class="trend-item-desc">예쁨이 폭발하네?</div>
+                        </div>
+                      </li>
+                      <li class="trend-item">
+                        <figure class="trend-item-thumbnail" style="background-color: red"></figure>
+                        <div class="trend-item-info">
+                          <div class="trend-item-title">꽃 원피스</div>
+                          <div class="trend-item-desc">예쁨이 폭발하네?</div>
+                        </div>
+                      </li>
+                      <li class="trend-item">
+                        <figure class="trend-item-thumbnail" style="background-color: red"></figure>
+                        <div class="trend-item-info">
+                          <div class="trend-item-title">꽃 원피스</div>
+                          <div class="trend-item-desc">예쁨이 폭발하네?</div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

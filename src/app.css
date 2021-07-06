@@ -34,6 +34,13 @@ h3 {  font-size: 14px; }
     background-size: 440px 408px;
 }
 
+.dot::after {
+    content: '';
+    display: inline-block;
+    background-color: #c8ccd1;
+    border-radius: 50%;
+}
+
 #wrap {
     overflow: hidden;
     min-width: 1190px;
@@ -90,6 +97,12 @@ h3 {  font-size: 14px; }
   content: '';
 }
 
+.sub-first {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .sub-first > a {
   font-size: 11px;
   color: #404040;
@@ -105,6 +118,7 @@ h3 {  font-size: 14px; }
 }
 
 .sub-second {
+    display: inline-block;
     background-position-x: -333px;
     background-position-y: -267px;
     width: 60px;
@@ -122,6 +136,7 @@ h3 {  font-size: 14px; }
 }
 
 .sub-third {
+    display: inline-block;
     background-position-x: -257px;
     background-position-y: -308px;
     width: 34px;
@@ -375,12 +390,8 @@ h3 {  font-size: 14px; }
 }
 
 .news-naver::after {
-    content: '';
-    display: inline-block;
     width: 3px;
     height: 3px;
-    background-color: #c8ccd1;
-    border-radius: 50%;
     margin-left: 8px;
     vertical-align: 3px;
 }
@@ -433,7 +444,7 @@ h3 {  font-size: 14px; }
     font-size: 14px;
 }
 
-.news-body-tabs a:nth-of-type(1)::after {
+.news-body-tabs a.subscription::after {
     content: '';
     display: inline-block;
     width: 4px;
@@ -763,6 +774,181 @@ h3 {  font-size: 14px; }
     width: 380px;
     margin: 1rem 0 0 1rem;
     background-color: skyblue;
+}
+
+.account {
+    position: relative;
+    padding: 16px 16px 12px 17px;
+    background-color: #F7F9FA;
+    border: 1px solid #dae1e6;
+}
+
+.account-intro {
+    padding-left: 3px;
+    color: gray;
+}
+
+.account-btn {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    background-color: #19ce60;
+    border: 1px solid #15c654;
+    border-radius: 2px;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 11px;
+}
+
+.account-logo-icon {
+    display: inline-block;
+    background-position-x: -209px;
+    background-position-y: -267px;
+	width: 60px;
+	height: 12px;
+    margin: 2px 5px 0 0;
+}
+
+.account-etc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 14px 8px 0 4px;
+}
+
+.account-etc a {
+    color: #404040;
+}
+
+.account-find-wrap a {
+    font-size: 12px;
+}
+
+.account-id::after {
+    width: 3px;
+    height: 3px;
+    margin: 0 2px 0 5px;
+    vertical-align: 3px;
+}
+
+.account-id-icon {
+    display: inline-block;
+    background-position-x: -408px;
+    background-position-y: -55px;
+    width: 10px;
+    height: 14px;
+    margin: -1px 1px 1px;
+}
+
+.account-join-icon {
+    display: inline-block;
+    background-position-x: -306px;
+    background-position-y: -308px;
+    width: 11px;
+    height: 11px;
+}
+
+.timeline-swiper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 47px;
+    background-color: #FFF;
+    border: 1px solid #dae1e6;
+    margin: 12px 0;
+    padding: 15px 16px 14px 16px;
+}
+
+.timeline-swiper-btn-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btn-wrap {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #e4e8eb;
+    height: 24px;
+}
+
+.btn-wrap .prev-btn,
+.btn-wrap .next-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev-btn {
+    width: 24px;
+    height: 100%;
+    background-color: #FFF;
+    border-right: 1px solid #e4e8eb;
+}
+
+.prev-btn > span {
+    display: inline-block;
+    background-position-x: -343px;
+    background-position-y: -296px;
+    width: 6px;
+    height: 9px;
+}
+
+.next-btn {
+    width: 24px;
+    height: 100%;
+    background-color: #FFF;
+}
+
+.next-btn > span {
+    display: inline-block;
+    background-position-x: -327px;
+    background-position-y: -296px;
+    width: 6px;
+    height: 9px;
+}
+
+.trend-body-swiper-btn-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 8px;
+}
+
+.trend-body-swiper {
+    padding: 0 8px;
+}
+
+.trend-body-swiper-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.trend-item {
+    width: 33.3%;
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding-right: 5px;
+}
+
+.trend-item-thumbnail {
+    display: inline-block;
+    width: 100%;
+    height: 146px;
+}
+
+.trend-item-info {
+    margin-top: 5px;
+}
+
+.trend-item-title {
+    font-weight: 700;
 }
 
 .ad-img2 {
