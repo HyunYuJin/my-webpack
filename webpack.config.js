@@ -6,7 +6,7 @@ module.exports = {
     mode: 'development',
     entry: { // 모듈의 시작점
         // 이름은 main
-        main: './src/app.js'
+        main: './app.js'
     },
     // 모든 js를 하나로 만들어서 output이라는 곳에 넣어준다.
     output: {
@@ -46,6 +46,11 @@ module.exports = {
                     name: '[name].[ext]?[hash]',
                     limit: 20000, // 20KB 미만은 js 문자열로 변환해버린다.
                 }
+            },
+            {
+                test: /\.js$/,
+                loader: 'babel-loader', // babel-loader가 처리
+                exclude: /node_modules/ // node_modules에 해당하는 내용들을 제외
             }
         ]
     },

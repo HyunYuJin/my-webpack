@@ -338,9 +338,9 @@ module.exports = {
     // './my-babel-preset'
     ['@babel/preset-env', {
       targets: {
-        // chrome 79버전 이상에서만 변환
+        // chrome 79버전까지는 변환이 되어야 한다.
         chrome: '79',
-        // IE 11버전 이상에서만 변환
+        // IE 11버전까지는 변환이 되어야 한다.
         ie: '11'
 
         // chrome과 ie 모두에서 사용가능하도록 변환
@@ -355,7 +355,37 @@ module.exports = {
 ```
 
 ### Polyfill
+Bable은 ES5+를 ES5까지로만 변환할 수 있는 것만 빌드합니다.
+그렇지 못한 것들을 Polyfill이라는 코드 조각을 추가해서 해결합니다.
 
+만약, Arrow Function은 일반 function으로 대체하거나, const나 let은 var로 대체할 수 있습니다.
+하지만 Promise의 경우는 ES5로 대체할 수가 없습니다.
+이를 해결하기 위해 가장 대표적으로 사용하는 Polyfill 라이브러리에는 'core-js (promise)'가 있습니다.
+
+env preset은 polyfill을 사용할지 말지를 지정해줄 수 있습니다.
+
+```javascript
+...
+useBuiltIns: 'usage', // 'entry', false
+corejs: {
+    version: 2, // 3
+}
+...
+```
+
+### Webpack과 Babel 통합하기
+일반적으로 Webpack은 Babel을 loader 형태로 제공합니다.
+'babel-loader'가 가장 대표적입니다.
+
+loader이기 때문에 Webpack.config.js 파일의 module 객체 내에서 설정해주어야 합니다.
+
+```javascript
+{
+  test: /\.js$/,
+  loader: 'babel-loader', // babel-loader가 처리
+  exclude: /node_modules/ // node_modules에 해당하는 내용들을 제외
+}
+```
 
 
 [참고: 김정환의 블로그](https://jeonghwan-kim.github.io/series/2019/12/09/frontend-dev-env-npm.html)
